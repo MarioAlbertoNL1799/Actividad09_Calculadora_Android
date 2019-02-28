@@ -59,8 +59,10 @@
         android:id="@+id/et_num1"
         android:layout_width="148dp"
         android:layout_height="wrap_content"
+        android:editable="true"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="197dp"
         tools:layout_editor_absoluteY="74dp" />
 
@@ -68,8 +70,10 @@
         android:id="@+id/et_num2"
         android:layout_width="148dp"
         android:layout_height="wrap_content"
+        android:editable="true"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="197dp"
         tools:layout_editor_absoluteY="154dp" />
 
@@ -80,6 +84,7 @@
         android:editable="false"
         android:ems="10"
         android:inputType="text|numberDecimal"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="197dp"
         tools:layout_editor_absoluteY="258dp" />
 
@@ -88,6 +93,7 @@
         android:layout_width="168dp"
         android:layout_height="88dp"
         android:fontFamily="sans-serif"
+        android:onClick="sumar"
         android:text="@string/suma"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="30dp"
@@ -98,6 +104,7 @@
         android:layout_width="168dp"
         android:layout_height="88dp"
         android:fontFamily="sans-serif"
+        android:onClick="restar"
         android:text="@string/resta"
         android:textSize="36sp"
         tools:layout_editor_absoluteX="197dp"
@@ -109,6 +116,7 @@
         android:layout_height="88dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif"
+        android:onClick="multiplicar"
         android:text="@string/multiplicar"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/bt_modulo"
@@ -121,6 +129,7 @@
         android:layout_width="168dp"
         android:layout_height="88dp"
         android:fontFamily="sans-serif"
+        android:onClick="dividir"
         android:text="@string/dividir"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="197dp"
@@ -131,6 +140,7 @@
         android:layout_width="335dp"
         android:layout_height="88dp"
         android:fontFamily="sans-serif"
+        android:onClick="modulo"
         android:text="@string/modulo"
         android:textSize="30sp"
         tools:layout_editor_absoluteX="30dp"
