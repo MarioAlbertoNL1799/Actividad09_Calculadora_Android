@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="82dp"
+        android:fontFamily="serif"
+        android:text="@string/result"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/et_resultado"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_num2"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="89dp"
+        android:fontFamily="serif"
+        android:text="@string/num_2"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
+        app:layout_constraintEnd_toStartOf="@+id/et_num2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num1" />
+
+    <TextView
+        android:id="@+id/tv_num1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="serif"
+        android:text="@string/num_1"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/tv_num2"
+        app:layout_constraintEnd_toStartOf="@+id/et_num1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_num1"
+        android:layout_width="126dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/colorWord"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/et_num2"
+        app:layout_constraintEnd_toStartOf="@+id/bt_suma"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_num2"
+        android:layout_width="126dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/colorWord"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/et_resultado"
+        app:layout_constraintEnd_toStartOf="@+id/bt_suma"
+        app:layout_constraintTop_toBottomOf="@+id/et_num1"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_resultado"
+        android:layout_width="126dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="87dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        android:textColorLink="@color/colorWord"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_multiplicar"
+        app:layout_constraintTop_toBottomOf="@+id/et_num2" />
+
+    <Button
+        android:id="@+id/bt_suma"
+        android:layout_width="142dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:onClick="accionSumar"
+        android:text="@string/suma"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_multiplicar"
+        app:layout_constraintEnd_toStartOf="@+id/bt_resta"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
+
+    <Button
+        android:id="@+id/bt_resta"
+        android:layout_width="142dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:onClick="accionRestar"
+        android:text="@string/resta"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_division"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
+
+    <Button
+        android:id="@+id/bt_multiplicar"
+        android:layout_width="142dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:onClick="accionMultiplicar"
+        android:text="@string/multiplicar"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_modulo"
+        app:layout_constraintEnd_toStartOf="@+id/bt_division" />
+
+    <Button
+        android:id="@+id/bt_division"
+        android:layout_width="142dp"
+        android:layout_height="88dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:onClick="accionDividir"
+        android:text="@string/dividir"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_modulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bt_modulo"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif"
+        android:onClick="accionModulo"
+        android:text="@string/modulo"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
