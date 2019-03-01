@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Example</string>
+    <string name="app_name">Calculadora</string>
     <string name="num_1">Primer valor:</string>
     <string name="num_2">Segundo valor:</string>
     <string name="result">Resultado:</string>
